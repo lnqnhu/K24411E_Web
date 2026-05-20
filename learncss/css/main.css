@@ -1,0 +1,9 @@
+body
+{
+    background-color: aquamarine;
+}
+h1{
+    color:red;
+    font-style: italic;
+}
+/* tạo ra 1 nơi để những ai xài cái style này thì sẽ có nền này */
