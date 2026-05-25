@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <h1>Provinces</h1>
+        <form name="provinceForm">
+            <select name="provinces" id="provinces" onchange="provinceForm.selectedProvince.value = this.value; 
+            provinceForm.selectedProvinceName.value = this.options[this.selectedIndex].text;">
+                <option value="">-- Chọn tỉnh thành phố --</option>
+                <optgroup label="Thành phố trực thuộc Trung ương">
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">Thành phố Hồ Chí Minh</option>
+                    <option value="haiphong">Hải Phòng</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="cantho">Cần Thơ</option>
+                    <option value="dongnai">Đồng Nai</option>
+                    <option value="thuathienhue">Thừa Thiên Huế</option>
+                </optgroup>
+                <optgroup label="Các tỉnh">
+                    <option value="angiang">An Giang</option>
+                    <option value="caobang">Cao Bằng</option>
+                    <option value="daklak">Đắk Lắk</option>
+                    <option value="dienbien">Điện Biên</option>
+                    <option value="dongthapy">Đồng Tháp</option>
+                    <option value="gialai">Gia Lai</option>
+                    <option value="hatinh">Hà Tĩnh</option>
+                    <option value="hungyen">Hưng Yên</option>
+                    <option value="khanhhoa">Khánh Hòa</option>
+                    <option value="laichau">Lai Châu</option>
+                    <option value="lamdong">Lâm Đồng</option>
+                    <option value="langson">Lạng Sơn</option>
+                    <option value="laocai">Lào Cai</option>
+                    <option value="nghean">Nghệ An</option>
+                    <option value="ninhbinh">Ninh Bình</option>
+                    <option value="phutho">Phú Thọ</option>
+                    <option value="quangninh">Quảng Ninh</option>
+                    <option value="quangtri">Quảng Trị</option>
+                    <option value="quangngai">Quảng Ngãi</option>
+                    <option value="sonla">Sơn La</option>
+                    <option value="tayninh">Tây Ninh</option>
+                    <option value="thanhhoa">Thanh Hóa</option>
+                    <option value="thainguyen">Thái Nguyên</option>
+                    <option value="tuyenquang">Tuyên Quang</option>
+                    <option value="vinhlong">Vĩnh Long</option>
+                    <option value="camau">Cà Mau</option>
+                    <option value="bacninh">Bắc Ninh</option>
+                </optgroup>
+            </select>
+            <p>Value of selected province:</p>
+            <input type="text" id="selectedProvince" readonly>
+            <p>Text of selected province:</p>
+            <input type="text" id="selectedProvinceName" readonly>
+        </form>
+    </body>
+</html>

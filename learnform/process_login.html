@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Kết quả đăng nhập</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+                background-color: #f5f5f5;
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                background-color: white;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                max-width: 500px;
+            }
+            .container h1 {
+                color: #4CAF50;
+                margin-top: 0;
+            }
+            .info {
+                text-align: left;
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-left: 4px solid #4CAF50;
+                margin: 20px 0;
+                border-radius: 4px;
+            }
+            .info p {
+                margin: 12px 0;
+                font-size: 16px;
+            }
+            .label {
+                color: #333;
+                font-weight: bold;
+            }
+            .value {
+                color: #4CAF50;
+                font-weight: bold;
+            }
+            .back-link {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                text-decoration: none;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+            }
+            .back-link:hover {
+                background-color: #45a049;
+            }
+            .error {
+                color: #f44336;
+                font-size: 16px;
+            }
+        </style>
+        <script>
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+            
+            function displayLoginInfo() {
+                var username = getUrlParameter('username');
+                var password = getUrlParameter('password');
+                var remember = getUrlParameter('remember');
+                
+                var infoDiv = document.getElementById('info');
+                
+                if (username && password) {
+                    var html = '<div class="info">';
+                    html += '<p><span class="label">Tên đăng nhập:</span> <span class="value">' + username + '</span></p>';
+                    html += '<p><span class="label">Mật khẩu:</span> <span class="value">' + password + '</span></p>';
+                    html += '<p><span class="label">Ghi nhớ:</span> <span class="value">' + (remember ? 'Có' : 'Không') + '</span></p>';
+                    html += '</div>';
+                    infoDiv.innerHTML = html;
+                } else {
+                    infoDiv.innerHTML = '<p class="error">❌ Không có dữ liệu được gửi từ form đăng nhập!</p>';
+                }
+            }
+            
+            window.onload = displayLoginInfo;
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>✓ Đăng nhập thành công!</h1>
+            <div id="info"></div>
+            <a href="login.html" class="back-link">← Quay lại đăng nhập</a>
+        </div>
+    </body>
+</html>
