@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Ex51</title>
+        <style>
+            .logo{text-align: center;}
+            h2{font-family: 'Arial'; text-align: center;}
+            body{background-color: rgb(25, 137, 104);
+            color:white;}
+            .button{text-align: center;}
+        </style>
+        <script>
+            function registerRegister(){
+                alert("Registration submitted successfully!");
+            }
+        </script>
+    </head>
+    <body>
+        <form name="registrationForm">
+        <div class="logo">
+            <img src="images/Logo.gif">
+        </div>
+        <h2>Newborn Registration</h2>
+        <p>
+            Date:
+            <input type="text" placeholder="mm/dd/yy" name="date">
+        </p>
+        <p>
+            1) Indant's first name:
+            <input type="text" name="firstname">
+            Last:
+            <input type="text" name="lastname">
+        </p>
+        <p>
+            2) Medical Record #:
+            <input type="text" name="record">
+        </p>
+        <p>
+            3) Date of birth:
+            <input type="text" placeholder="mm/dd/yy" name="dob">
+        </p>
+        <p>
+            4) Birth weight:
+            <input type="text" name="weight">
+        </p>
+        <p>
+            5) APGAR score:
+            <input type="text" name="apgar">
+        </p>
+        <p>
+            6) Mother's first name:
+            <input type="text" name="motherfname">
+            Last:
+            <input type="text" name="motherlname">
+        </p>
+        <p>
+            7) Father's first name:
+            <input type="text" name="fatherfname">
+            Last:
+            <input type="text" name="fatherlname">
+        </p>
+        <p>
+            8) Physician (check all that apply):
+            <select id="physician" name="physician" size="5">
+                <option value="drwa">Dr. Warren Albert</option>
+                <option value="drma">Dr. Maria Alvarez</option>
+                <option value="drkb">Dr. Karen Brinkman</option>
+                <option value="drmk">Dr. Michael Kerry</option>
+            </select>
+        </p>
+        <div class="button">
+            <input type="button" value="Register" onclick="registerRegister()">
+            <input type="reset" value="Cancel">
+        </div>
+        </form>
+    </body>
+</html>
