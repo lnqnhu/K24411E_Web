@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Ex50</title>
+        <style>
+            .logo{text-align: center;}
+            hr{border: 1px solid brown;}
+            body{background-color: rgb(152, 225, 243);
+            font-family: 'Times New Roman';}
+            td{text-align: center;}
+        </style>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="images/DeLong.jpg">
+        </div>
+        <form name="reportForm">
+            <h2>Travel Expense Report</h2>
+            <hr>
+            <p>
+                1) First Name:
+                <input type="text" name="firstname">
+                Last Name:
+                <input type="text" name="lastname">
+            </p>
+            <p>
+                2) Social Security Number:
+                <input type="text" name="number">
+            </p>
+            <p>
+                3) Department:
+                <select name="department" id="department" onchange="reportForm.selectedDepartment.value = this.value;">
+                <option value="accounting">Accounting</option>
+                <option value="hr">HR</option>
+                <option value="it">IT</option>
+                <option value="finance">Finance</option>
+                </select>
+            </p>
+            <p>
+                4) Describe the purpose of your trip.
+            </p>
+            <p>
+                <textarea></textarea>
+            </p>
+            <p>5) Itemize your travel expenses</p>
+            <table border="1">
+                <tr>
+                    <td>Date</td>
+                    <td>Description</td>
+                    <td>Category</td>
+                    <td>Amount</td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yyyy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yyyy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yyyy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yyyy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+            <p>
+                6) Have you submitted your receipts?
+                <input type="radio" name="receipt">Yes
+                <input type="radio" name="receipt">No
+            </p>
+            <input 
+                type="button" 
+                value="Submit travel expenses"
+                onclick="registerAlert()">
+            <input 
+                type="reset" 
+                value="Reset">
+            <p>
+                Questions? Contact Debbie Larson in Accounting (ext. 2150).
+            </p>
+        </form>
+    </body>
+</html>
