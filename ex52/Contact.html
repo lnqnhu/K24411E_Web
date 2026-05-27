@@ -3,6 +3,45 @@
         <title>Ex52</title>
     </head>
     <body>
-        <h1>Nội dung trang</h1>
+        <h2>Contact the editorial office</h2>
+        <form method="GET" action="processContact.html">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <p>Full Name</p>
+                        <input type="text" name="fullname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Email</p>
+                        <input type="text" name="email">
+                    </td>
+                    <td>
+                        <p>Send to</p>
+                        <select name="sendto">
+                            <option>Editorial Board</option>
+                            <option>News Department</option>
+                            <option>Board of Perspectives</option>
+                            <option>World Board</option>
+                            <option>Business Department</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Title</p>
+                        <input type="text" name="title">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>Content</p>
+                        <textarea name="content"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Send">
+        </form>
     </body>
 </html>
