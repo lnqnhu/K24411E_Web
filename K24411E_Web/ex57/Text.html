@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script type="text/javascript">
+            function calculateTotal()
+            {
+                var p1 = 19.95;
+                var p2 = 29.95;
+                var p3 = 39.95;
+                var q1 = parseInt(document.getElementById("qty1").value) || 0;
+                var q2 = parseInt(document.getElementById("qty2").value) || 0;
+                var q3 = parseInt(document.getElementById("qty3").value) || 0;
+                var item1 = p1 * q1;
+                var item2 = p2 * q2;
+                var item3 = p3 * q3;
+                document.getElementById("item1").value = item1.toFixed(2);
+                document.getElementById("item2").value = item2.toFixed(2);
+                document.getElementById("item3").value = item3.toFixed(2);
+                var total = item1 + item2 + item3;
+                document.getElementById("total").value = total.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Part Number</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Item Total</th>
+            </tr>
+
+            <tr>
+                <td>C112</td>
+                <td>Mouse</td>
+                <td>19.95$</td>
+                <td>
+                    <input type="text" id="qty1">
+                </td>
+                <td>
+                    <input type="text" id="item1" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>B124</td>
+                <td>Keyboard US</td>
+                <td>29.95$</td>
+                <td>
+                    <input type="text" id="qty2">
+                </td>
+                <td>
+                    <input type="text" id="item2" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>U125</td>
+                <td>USB KingMax</td>
+                <td>39.95$</td>
+                <td>
+                    <input type="text" id="qty3">
+                </td>
+                <td>
+                    <input type="text" id="item3" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" align="right">
+                    Total:
+                </td>
+                <td>
+                    <input type="text" id="total" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5" align="right">
+                    <input
+                        style="background-color: lightsalmon;"
+                        type="button"
+                        value="Sum"
+                        onclick="calculateTotal()">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

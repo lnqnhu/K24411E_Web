@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+            function displayCustomerInfo()
+            {
+                //alert("Name: "+myform.name.value)
+                //alert("Name: "+document.getElementById("name").value)
+                var name = document.getElementById("name").value;
+                var customerType = document.getElementById("customerType").value;
+                divInfo = document.getElementById("customerInfo");
+                //nếu dùng biến var để khai báo thì biến đó sẽ dc khai sinh ngay lúc đó
+                //nếu biến đó là biến toàn cục mà mình muốn lấy giá trị của nó thì k khai báo var, nếu khai báo var thì biến đó sẽ biến mất, và dữ liệu mới sẽ là cái biến var 
+                switch(customerType)
+                {
+                    case "vip":
+                        divInfo.innerHTML = "Khách hàng VIP: "+name;
+                        divInfo.style.backgroundColor = "lightblue";
+                        break;
+                    case "normal":
+                        divInfo.innerHTML = "Khách hàng bình thường: "+name;
+                        divInfo.style.backgroundColor = "lightyellow";
+                        break;
+                    case "potential":
+                        divInfo.innerHTML = "Khách hàng tiềm năng: "+name;
+                        divInfo.style.backgroundColor = "lightcoral";
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name"><br><br>
+            Customer Type:
+            <select name="customerType" id="customerType">
+                <option value="vip">VIP</option>
+                <option value="normal">Normal</option>
+                <option value="potential">Potential</option>
+            </select><br><br>
+            <input type="button" value="OK" onclick="displayCustomerInfo()">
+        </form>
+        <div id="customerInfo">
+
+        </div>
+    </body>
+</html>

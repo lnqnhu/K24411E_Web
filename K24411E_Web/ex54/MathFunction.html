@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script type="text/javascript">
+            function getValues()
+            {
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var c = parseFloat(document.getElementById("c").value);
+                return {a:a, b:b, c:c};
+            }
+            function findMax()
+            {
+                var data = getValues();
+                document.getElementById("result").value = Math.max(data.a, data.b, data.c);
+            }
+            function findMin()
+            {
+                var data = getValues();
+                document.getElementById("result").value = Math.min(data.a, data.b, data.c);
+            }
+            function calcSin()
+            {
+                var data = getValues();
+                document.getElementById("result").value = Math.sin(data.a);
+            }
+            function calcCos()
+            {
+                var data = getValues();
+                document.getElementById("result").value = Math.cos(data.a);
+            }
+            function calcPower()
+            {
+                var data = getValues();
+                document.getElementById("result").value = Math.pow(data.a, data.b);
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>a:</td>
+                <td>
+                    <input type="text" id="a">
+                </td>
+            </tr>
+            <tr>
+                <td>b:</td>
+                <td>
+                    <input type="text" id="b">
+                </td>
+            </tr>
+            <tr>
+                <td>c:</td>
+                <td>
+                    <input type="text" id="c">
+                </td>
+            </tr>
+            <tr>
+                <td>Result:</td>
+                <td>
+                    <input type="text" id="result" readonly>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <input type="button" value="MAX" onclick="findMax()">
+        <input type="button" value="MIN" onclick="findMin()">
+        <input type="button" value="sin(a)" onclick="calcSin()">
+        <input type="button" value="Cos(a)" onclick="calcCos()">
+        <input type="button" value="a^b" onclick="calcPower()">
+    </body>
+</html>
