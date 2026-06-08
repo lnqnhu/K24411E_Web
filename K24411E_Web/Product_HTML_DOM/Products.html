@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script>
+            var products=[
+                {id:1, name:"iPhone 11 Pro Max", price:100},
+                {id:2, name:"Samsung Galaxy S25", price:200},
+                {id:3, name:"Xiaomi Redmi Note 10", price:300},
+                {id:4, name:"Apple iPad Air", price:400}
+            ]
+        </script>
+    </head>
+    <body>
+        <table id="tbl_product">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>#Action</th>
+                </tr>
+            </thead>
+            <tbody id="product_table_body">
+            </tbody>
+        </table>
+        <script src="js/mainjs.js"></script>
+        <script>
+            load_product_data(products,document.getElementById("tbl_product"));
+        </script>
+    </body>
+</html>

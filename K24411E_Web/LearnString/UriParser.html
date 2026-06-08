@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+    </head>
+    <body>
+        <form name="myform">
+            <p>URI:</p>
+            <input type="text" name="uri" id="uri" maxlength="200" size="100"
+            value="https://www.example.com:8080/search?id=id123&name=John">
+            <button type="button" onclick="parseURI()">Get Infor</button>
+            <p>Protocol: <span id="protocol"></span></p>
+            <p>Host: <span id="host"></span></p>
+            <p>Port: <span id="port"></span></p>
+            <p>ID: <span id="query-id"></span></p>
+            <p>Name: <span id="query-name"></span></p>
+        </form>
+        <script>
+            function parseURI() {
+                try {
+                    const uriInput = document.getElementById('uri').value;
+                    const urlObj = new URL(uriInput);
+                    document.getElementById('protocol').textContent = urlObj.protocol.replace(':', '');
+                    document.getElementById('host').textContent = urlObj.hostname;
+                    document.getElementById('port').textContent = urlObj.port || 'Mặc định';
+                    const params = new URLSearchParams(urlObj.search);
+                    document.getElementById('query-id').textContent = params.get('id') || 'Không có';
+                    document.getElementById('query-name').textContent = params.get('name') || 'Không có';
+                } catch (error) {
+                    alert('URL không hợp lệ: ' + error.message);
+                }
+            }
+        </script>
+    </body>
+</html>
