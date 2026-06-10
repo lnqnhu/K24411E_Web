@@ -1,0 +1,47 @@
+body{
+    font-family: Times New Roman;
+}
+
+#container{
+    width: 950px;
+    margin: 20px auto;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    padding: 4px;
+}
+
+button{
+    width: 170px;
+    height: 40px;
+    font-size: 18px;
+}
+
+input[type=text]{
+    height: 28px;
+    font-size: 18px;
+}
+
+#txtContent,
+#txtNewContent{
+    width: 280px;
+}
+
+.pos{
+    width: 80px;
+}
+
+h2{
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+ul{
+    font-size: 24px;
+}

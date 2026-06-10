@@ -1,0 +1,45 @@
+body{
+    font-family: "Times New Roman", serif;
+}
+.container{
+    width: 800px;
+    margin: 20px auto;
+    border: 1px solid gray;
+    padding: 10px;
+}
+h1{
+    margin-left: 10px;
+}
+.form-table td{
+    padding: 3px;
+    vertical-align: top;
+}
+.data-table{
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+.data-table th,
+.data-table td{
+    border: 1px solid black;
+    padding: 4px;
+}
+.data-table th{
+    background: blue;
+    color: white;
+}
+.blue{
+    background: lightblue;
+}
+.red{
+    background: red;
+}
+.yellow{
+    background: yellow;
+}
+.green{
+    background: lightgreen;
+}
+.violet{
+    background: violet;
+}

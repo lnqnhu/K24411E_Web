@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Member Registration</h1>
+            <hr>
+            <table class="form-table">
+                <tr>
+                    <td>Name(*)</td>
+                    <td>
+                        <input type="text" id="Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Birthday(*)</td>
+                    <td>
+                        Day:
+                        <select id="day"></select>
+                        Month:
+                        <select id="month"></select>
+
+                        Year:
+                        <select id="year"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender(*)</td>
+                    <td>
+                        <input type="radio"
+                            id="man"
+                            name="gender"
+                            >
+                        Man
+                        <input type="radio"
+                            id="woman"
+                            name="gender">
+                        Woman
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email(*)</td>
+                    <td>
+                        <input type="text" id="Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br>
+                        Your favorite:
+                        <br>
+                        <input type="checkbox"
+                            class="hobby"
+                            value="Shopping"
+                            >
+                        Shopping
+                        <br>
+                        <input type="checkbox"
+                            class="hobby"
+                            value="Tourism"
+                            >
+                        Tourism
+                        <br>
+                        <input type="checkbox"
+                            class="hobby"
+                            value="Chat"
+                            >
+                        Chat
+                        <br>
+                        <input type="checkbox"
+                            class="hobby"
+                            value="Reading">
+                        Read a book
+                        <br>
+                        <input type="checkbox"
+                            class="hobby"
+                            value="Listening to music">
+                        Listening to music
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Your favorite color:
+                        <br>
+                        <input type="radio"
+                            id="blue"
+                            name="color"
+                            value="Blue"
+                            >
+                        <span class="blue">Blue</span>
+                        <br>
+                        <input type="radio"
+                            name="color"
+                            value="Red">
+                        <span class="red">Red</span>
+                        <br>
+                        <input type="radio"
+                            name="color"
+                            value="Yellow">
+                        <span class="yellow">Yellow</span>
+                        <br>
+                        <input type="radio"
+                            name="color"
+                            value="Green">
+                        <span class="green">Green</span>
+                        <br>
+                        <input type="radio"
+                            name="color"
+                            value="Violet">
+                        <span class="violet">Violet</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <br>
+
+                        <input type="button"
+                            value="Sign up"
+                            onclick="signUp()">
+
+                        <input type="button"
+                            value="Reset"
+                            onclick="resetForm()">
+                    </td>
+                </tr>
+            </table>
+            <table class="data-table" id="memberTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                    <th>Hobbies</th>
+                    <th>Colors</th>
+                </tr>
+            </table>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>

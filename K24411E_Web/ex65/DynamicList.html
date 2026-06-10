@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="container">
+
+    <table>
+        <tr>
+            <td>
+                <button onclick="addNode()">Add Node</button>
+            </td>
+
+            <td>Content</td>
+
+            <td>
+                <input type="text" id="txtContent">
+            </td>
+
+            <td>Position</td>
+
+            <td>
+                <input type="text" id="txtAddPos" class="pos">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="removeNode()">Remove Node</button>
+            </td>
+
+            <td></td>
+            <td></td>
+
+            <td>Position</td>
+
+            <td>
+                <input type="text" id="txtRemovePos" class="pos">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button onclick="modifyNode()">Modify Node</button>
+            </td>
+
+            <td>New Content</td>
+
+            <td>
+                <input type="text" id="txtNewContent">
+            </td>
+
+            <td>Position</td>
+
+            <td>
+                <input type="text" id="txtModifyPos" class="pos">
+            </td>
+        </tr>
+    </table>
+
+    <h2>Web Node</h2>
+
+    <div id="webNode">
+        <ul id="nodeList">
+            <li>Data base</li>
+            <li>Web1</li>
+            <li>Web2</li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="js/mainjs.js"></script>
+
+    </body>
+</html>
