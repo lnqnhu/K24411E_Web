@@ -1,0 +1,15 @@
+tbody tr:nth-child(odd)
+{
+    background-color: pink;
+}
+tbody tr:nth-child(even)
+{
+    background-color:lavender;
+}
+tbody tr:hover
+{
+    background-color: yellow;
+}
+td img{
+    cursor:pointer;
+}
