@@ -1,0 +1,29 @@
+body{
+    font-family: Arial;
+    margin: 20px;
+}
+
+.titleTable{
+    width: 400px;
+}
+
+#title{
+    width: 200px;
+    height: 30px;
+}
+
+#employeeTable{
+    width: 600px;
+    border-collapse: collapse;
+}
+
+#employeeTable th,
+#employeeTable td{
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#employeeTable th{
+    background-color: #6b8e23;
+    color: white;
+}

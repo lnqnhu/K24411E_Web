@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>ex67</title>
+        <link rel="stylesheet" href="css/maincss.css">
+
+        <script src="js/dataset.js"></script>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <h2>List of Students</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th onclick="sortTable('id')">Student ID</th>
+                    <th onclick="sortTable('name')">Student Name</th>
+                    <th onclick="sortTable('birthday')">Birthday</th>
+                    <th onclick="sortTable('gender')">Gender</th>
+                </tr>
+            </thead>
+            <tbody id="studentbody">
+            </tbody>
+        </table>
+        <h2>Student Detail</h2>
+        <table border="1" id="detailtable">
+            <tr>
+                <td>Student ID</td>
+                <td id="detail_id"></td>
+            </tr>
+            <tr>
+                <td>Student Name</td>
+                <td id="detail_name"></td>
+            </tr>
+            <tr>
+                <td>Birthday</td>
+                <td id="detail_birthday"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td id="detail_gender"></td>
+            </tr>
+        </table>
+        <script>
+            loadStudents();
+        </script>
+    </body>
+</html>
